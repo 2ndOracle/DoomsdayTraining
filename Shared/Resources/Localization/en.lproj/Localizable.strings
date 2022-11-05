@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Doomsday Training
+
+  Created by Александр Шакмаков on 31.10.2022.
+  
+*/
+
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"saturday" = "Saturday";
+"sunday" = "Sunday";
+
+"monday_short" = "MO";
+"tuesday_short" = "TU";
+"wednesday_short" = "WE";
+"thursday_short" = "TH";
+"friday_short" = "FR";
+"saturday_short" = "SA";
+"sunday_short" = "SU";
