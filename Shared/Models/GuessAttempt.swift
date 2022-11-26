@@ -13,11 +13,4 @@ struct GuessAttempt {
     let guessedWeekday: Weekday
     
     let attemptDate: Date
-    
-    
-    func todo() {
-        let attempt = DBGuessAttempt()
-        attempt.guessedWeekday
-        attempt.dateToGuess
-    }
 }

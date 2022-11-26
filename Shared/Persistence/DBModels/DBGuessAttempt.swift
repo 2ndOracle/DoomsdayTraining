@@ -5,16 +5,9 @@
 //  Created by Александр Шакмаков on 05.11.2022.
 //
 
-extension DBGuessAttempt {
-    convenience init(from entity: GuessAttempt) {
-        self.init()
-        self.dateToGuess = entity.dateToGuess
-        self.guessedWeekday = Int16(entity.guessedWeekday.rawValue)
-        self.attemptDate = entity.attemptDate
-    }
-}
+import CoreData
 
-private extension GuessAttempt {
+extension GuessAttempt {
     init?(from model: DBGuessAttempt) {
         guard
             let dateToGuess = model.dateToGuess,
@@ -29,4 +22,21 @@ private extension GuessAttempt {
             attemptDate: attemptDate
         )
     }
+}
+
+// MARK: - DBPuttable
+extension GuessAttempt: DBPuttable {
+    func put(in context: NSManagedObjectContext) {
+        let dbModel = DBGuessAttempt.init(context: context)
+        dbModel.dateToGuess = dateToGuess
+        dbModel.guessedWeekday = Int16(guessedWeekday.rawValue)
+        dbModel.attemptDate = attemptDate
+    }
+}
+
+// MARK: - DBFetchable
+extension DBGuessAttempt: DBFetchableModel {}
+
+extension GuessAttempt: DBFetchable {
+    typealias DBModel = DBGuessAttempt
 }

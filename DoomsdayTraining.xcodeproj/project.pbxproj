@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0528D14429168B60000A6403 /* DBGuessAttempt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14229168B60000A6403 /* DBGuessAttempt.xcdatamodeld */; };
-		0528D14529168B60000A6403 /* DBGuessAttempt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14229168B60000A6403 /* DBGuessAttempt.xcdatamodeld */; };
+		0528D14429168B60000A6403 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14229168B60000A6403 /* Main.xcdatamodeld */; };
+		0528D14529168B60000A6403 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14229168B60000A6403 /* Main.xcdatamodeld */; };
 		0528D14729168BD6000A6403 /* DBGuessAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14629168BD6000A6403 /* DBGuessAttempt.swift */; };
 		0528D14829168BD6000A6403 /* DBGuessAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14629168BD6000A6403 /* DBGuessAttempt.swift */; };
+		05486B13292D632B004AA0FA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05486B12292D632B004AA0FA /* StatisticsView.swift */; };
+		05486B14292D632B004AA0FA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05486B12292D632B004AA0FA /* StatisticsView.swift */; };
+		0551BA5829182C3C00258424 /* DBFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551BA5729182C3C00258424 /* DBFetchable.swift */; };
+		0551BA5929182C3C00258424 /* DBFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551BA5729182C3C00258424 /* DBFetchable.swift */; };
 		0553CE1D2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0553CE1C2915B1AC004E7DD1 /* GuessAttempt.swift */; };
 		0553CE1E2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0553CE1C2915B1AC004E7DD1 /* GuessAttempt.swift */; };
 		055B2006290A6EB9007FC8AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B2005290A6EB9007FC8AB /* Colors.swift */; };
@@ -21,10 +25,14 @@
 		057097E4290C17130042EC4C /* HoneyCombTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057097E2290C17130042EC4C /* HoneyCombTile.swift */; };
 		0578CD9F290D35F400908759 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578CD9E290D35F400908759 /* Weekday.swift */; };
 		0578CDA0290D35F400908759 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578CD9E290D35F400908759 /* Weekday.swift */; };
-		058AEECA2915D555006CDFE2 /* ContainerProviderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AEEC92915D555006CDFE2 /* ContainerProviderClient.swift */; };
-		058AEECB2915D555006CDFE2 /* ContainerProviderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AEEC92915D555006CDFE2 /* ContainerProviderClient.swift */; };
+		058AEECA2915D555006CDFE2 /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AEEC92915D555006CDFE2 /* DBClient.swift */; };
+		058AEECB2915D555006CDFE2 /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AEEC92915D555006CDFE2 /* DBClient.swift */; };
 		059E8262290F1948007FD642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059E8265290F1948007FD642 /* Localizable.strings */; };
 		059E8263290F1948007FD642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059E8265290F1948007FD642 /* Localizable.strings */; };
+		05C12985293280C000DF09E1 /* EmptyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C12984293280C000DF09E1 /* EmptyBackground.swift */; };
+		05C12986293280C000DF09E1 /* EmptyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C12984293280C000DF09E1 /* EmptyBackground.swift */; };
+		05C5561C2916E839005BB568 /* DBPuttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5561B2916E839005BB568 /* DBPuttable.swift */; };
+		05C5561D2916E839005BB568 /* DBPuttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5561B2916E839005BB568 /* DBPuttable.swift */; };
 		05D78C3029098EAA0050623B /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D78C2F29098EAA0050623B /* Date+Formatter.swift */; };
 		05D78C3129098EAA0050623B /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D78C2F29098EAA0050623B /* Date+Formatter.swift */; };
 		05D78C3429099EF60050623B /* PolygonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D78C3329099EF60050623B /* PolygonShape.swift */; };
@@ -65,14 +73,18 @@
 /* Begin PBXFileReference section */
 		0528D14329168B60000A6403 /* DBGuessAttempt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBGuessAttempt.xcdatamodel; sourceTree = "<group>"; };
 		0528D14629168BD6000A6403 /* DBGuessAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBGuessAttempt.swift; sourceTree = "<group>"; };
+		05486B12292D632B004AA0FA /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		0551BA5729182C3C00258424 /* DBFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFetchable.swift; sourceTree = "<group>"; };
 		0553CE1C2915B1AC004E7DD1 /* GuessAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessAttempt.swift; sourceTree = "<group>"; };
 		055B2005290A6EB9007FC8AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		055B2008290A6F7F007FC8AB /* HoneyCombGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneyCombGrid.swift; sourceTree = "<group>"; };
 		057097E2290C17130042EC4C /* HoneyCombTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneyCombTile.swift; sourceTree = "<group>"; };
 		0578CD9E290D35F400908759 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
-		058AEEC92915D555006CDFE2 /* ContainerProviderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProviderClient.swift; sourceTree = "<group>"; };
+		058AEEC92915D555006CDFE2 /* DBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBClient.swift; sourceTree = "<group>"; };
 		059E8264290F1948007FD642 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		059E8268290F1C6C007FD642 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05C12984293280C000DF09E1 /* EmptyBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBackground.swift; sourceTree = "<group>"; };
+		05C5561B2916E839005BB568 /* DBPuttable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPuttable.swift; sourceTree = "<group>"; };
 		05D78C2F29098EAA0050623B /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		05D78C3329099EF60050623B /* PolygonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonShape.swift; sourceTree = "<group>"; };
 		05E2C40529089095004DE440 /* DoomsdayTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayTrainingApp.swift; sourceTree = "<group>"; };
@@ -123,10 +135,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05486B10292D6269004AA0FA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				05486B11292D6317004AA0FA /* Statistics */,
+				05E2C441290890C6004DE440 /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		05486B11292D6317004AA0FA /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				05486B12292D632B004AA0FA /* StatisticsView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		0553CE142915A7EB004E7DD1 /* DBModels */ = {
 			isa = PBXGroup;
 			children = (
-				0528D14229168B60000A6403 /* DBGuessAttempt.xcdatamodeld */,
 				0528D14629168BD6000A6403 /* DBGuessAttempt.swift */,
 			);
 			path = DBModels;
@@ -154,8 +182,11 @@
 		059E1C2F290D378C007FD642 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				0528D14229168B60000A6403 /* Main.xcdatamodeld */,
+				058AEEC92915D555006CDFE2 /* DBClient.swift */,
+				05C5561B2916E839005BB568 /* DBPuttable.swift */,
+				0551BA5729182C3C00258424 /* DBFetchable.swift */,
 				0553CE142915A7EB004E7DD1 /* DBModels */,
-				058AEEC92915D555006CDFE2 /* ContainerProviderClient.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -166,6 +197,14 @@
 				059E8265290F1948007FD642 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		05C129832932803000DF09E1 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				05C12984293280C000DF09E1 /* EmptyBackground.swift */,
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 		05D78C2E29098E920050623B /* Extensions */ = {
@@ -206,7 +245,8 @@
 				0578CD9D290D35DB00908759 /* Models */,
 				055B2004290A6E9E007FC8AB /* Resources */,
 				05D78C2E29098E920050623B /* Extensions */,
-				05E2C441290890C6004DE440 /* Main */,
+				05486B10292D6269004AA0FA /* Presentation */,
+				05C129832932803000DF09E1 /* CommonViews */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -419,18 +459,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0551BA5829182C3C00258424 /* DBFetchable.swift in Sources */,
 				05D78C3029098EAA0050623B /* Date+Formatter.swift in Sources */,
 				05E2C42F29089096004DE440 /* ContentView.swift in Sources */,
 				05D78C3429099EF60050623B /* PolygonShape.swift in Sources */,
-				058AEECA2915D555006CDFE2 /* ContainerProviderClient.swift in Sources */,
+				058AEECA2915D555006CDFE2 /* DBClient.swift in Sources */,
 				05E2C44629089106004DE440 /* MainView.swift in Sources */,
 				055B2006290A6EB9007FC8AB /* Colors.swift in Sources */,
 				05E2C443290890EB004DE440 /* MainVM.swift in Sources */,
 				0578CD9F290D35F400908759 /* Weekday.swift in Sources */,
+				05C12985293280C000DF09E1 /* EmptyBackground.swift in Sources */,
 				055B2009290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */,
 				0528D14729168BD6000A6403 /* DBGuessAttempt.swift in Sources */,
 				05E2C42D29089096004DE440 /* DoomsdayTrainingApp.swift in Sources */,
-				0528D14429168B60000A6403 /* DBGuessAttempt.xcdatamodeld in Sources */,
+				0528D14429168B60000A6403 /* Main.xcdatamodeld in Sources */,
+				05486B13292D632B004AA0FA /* StatisticsView.swift in Sources */,
+				05C5561C2916E839005BB568 /* DBPuttable.swift in Sources */,
 				0553CE1D2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */,
 				057097E3290C17130042EC4C /* HoneyCombTile.swift in Sources */,
 			);
@@ -440,18 +484,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0551BA5929182C3C00258424 /* DBFetchable.swift in Sources */,
 				05D78C3129098EAA0050623B /* Date+Formatter.swift in Sources */,
 				05E2C43029089096004DE440 /* ContentView.swift in Sources */,
 				05D78C3529099EF60050623B /* PolygonShape.swift in Sources */,
-				058AEECB2915D555006CDFE2 /* ContainerProviderClient.swift in Sources */,
+				058AEECB2915D555006CDFE2 /* DBClient.swift in Sources */,
 				05E2C44729089106004DE440 /* MainView.swift in Sources */,
 				055B2007290A6EB9007FC8AB /* Colors.swift in Sources */,
 				05E2C444290890EB004DE440 /* MainVM.swift in Sources */,
 				0578CDA0290D35F400908759 /* Weekday.swift in Sources */,
+				05C12986293280C000DF09E1 /* EmptyBackground.swift in Sources */,
 				055B200A290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */,
 				0528D14829168BD6000A6403 /* DBGuessAttempt.swift in Sources */,
 				05E2C42E29089096004DE440 /* DoomsdayTrainingApp.swift in Sources */,
-				0528D14529168B60000A6403 /* DBGuessAttempt.xcdatamodeld in Sources */,
+				0528D14529168B60000A6403 /* Main.xcdatamodeld in Sources */,
+				05486B14292D632B004AA0FA /* StatisticsView.swift in Sources */,
+				05C5561D2916E839005BB568 /* DBPuttable.swift in Sources */,
 				0553CE1E2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */,
 				057097E4290C17130042EC4C /* HoneyCombTile.swift in Sources */,
 			);
@@ -633,7 +681,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sample.Doomsday-Training";
+				PRODUCT_BUNDLE_IDENTIFIER = sample.doomsday.training;
 				PRODUCT_NAME = DoomsdayTraining;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -663,7 +711,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sample.Doomsday-Training";
+				PRODUCT_BUNDLE_IDENTIFIER = sample.doomsday.training;
 				PRODUCT_NAME = DoomsdayTraining;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -859,13 +907,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0528D14229168B60000A6403 /* DBGuessAttempt.xcdatamodeld */ = {
+		0528D14229168B60000A6403 /* Main.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				0528D14329168B60000A6403 /* DBGuessAttempt.xcdatamodel */,
 			);
 			currentVersion = 0528D14329168B60000A6403 /* DBGuessAttempt.xcdatamodel */;
-			path = DBGuessAttempt.xcdatamodeld;
+			path = Main.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

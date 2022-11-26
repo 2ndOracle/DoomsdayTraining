@@ -54,7 +54,29 @@ extension Weekday {
     }
 }
 
-//todo
+// MARK: - Name
+extension Weekday {
+    var name: String {
+        switch self {
+        case .monday:
+            return "monday".localized
+        case .tuesday:
+            return "tuesday".localized
+        case .wednesday:
+            return "wednesday".localized
+        case .thursday:
+            return "thursday".localized
+        case .friday:
+            return "friday".localized
+        case .saturday:
+            return "saturday".localized
+        case .sunday:
+            return "sunday".localized
+        }
+    }
+}
+
+//todo вынести
 extension String {
     var localized: String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")

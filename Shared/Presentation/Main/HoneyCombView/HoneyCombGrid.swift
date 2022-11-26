@@ -13,6 +13,7 @@ struct HoneyCombGrid: View {
     
     private let columnsCount: Int = 3
     private let spacing: CGFloat = 10
+    private let emptyTileIndex: Int = 2
     
     @State private var isInitialState = true
     @State private var tileData = Self.createInitialTileData()
@@ -47,6 +48,7 @@ struct HoneyCombGrid: View {
                             .offset(x: isEvenRow(index) ? hexagonWidth / 2 + (spacing/2) : 0)
                     )
                     .onTapGesture {
+                        guard index != emptyTileIndex else { return }
                         if isInitialState {
                             onTap(index: index)
                         } else {
@@ -75,7 +77,7 @@ extension HoneyCombGrid {
     
     private func onTap(index: Int) {
         // +1 day from empty Tile
-        let dayIndex = index < 3 ? index : index - 1
+        let dayIndex = index <= emptyTileIndex ? index : index - 1
         let weekday = Weekday.allCases[dayIndex]
         input.onTapWeekday(weekday)
         
@@ -85,9 +87,9 @@ extension HoneyCombGrid {
             }
             
             if weekday == input.hiddenWeekday.wrappedValue {
-                tileData[index].color = .green
+                tileData[index].color = Colors.mint
             } else {
-                tileData[index].color = .red
+                tileData[index].color = Colors.red
             }
         }
         
