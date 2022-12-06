@@ -11,19 +11,19 @@ struct MainView: View {
     @StateObject var viewModel: ViewModel
 
     var body: some View {
-        ZStack {
-            Colors.mainBg
+        EmptyBackground {
             VStack {
+                bar
                 Spacer()
+                
                 Text("Guess which day is")
                     .foregroundColor(Color.white)
                     .font(Font.system(size: 32))
-                
                 Text(viewModel.dateToGuess)
                     .foregroundColor(Color.white)
                     .font(Font.system(size: 32))
+                Spacer()
                 
-                //todo взять сюда цвета из другой приложухи
                 HoneyCombGrid(
                     input: HoneyCombGrid.Input(
                         hiddenWeekday: $viewModel.weekday,
@@ -32,18 +32,46 @@ struct MainView: View {
                     )
                 )
                 .aspectRatio(contentMode: .fit)
-
-                //todo
-                Text(String(viewModel.movies.count))
-                    .foregroundColor(.white)
+                
+                Spacer()
             }
         }
-        .ignoresSafeArea()
+        .sheet(isPresented: $viewModel.isStatsPresented) {
+            StatisticsView(
+                isPresented: $viewModel.isStatsPresented,
+                viewModel: StatisticsView.ViewModel(dbClient: DBClient.live)
+            )
+        }
+        .sheet(isPresented: $viewModel.isInfoPresented) {
+            InfoView(isPresented: $viewModel.isInfoPresented)
+        }
+    }
+    
+    private var bar: some View {
+        HStack {
+            Image(systemName: "list.dash")
+                .font(Font.system(size: 24))
+                .foregroundColor(Color.white)
+                .onTapGesture {
+                    viewModel.isStatsPresented = true
+                }
+            
+            Spacer()
+            
+            Image(systemName: "info.circle")
+                .font(Font.system(size: 24))
+                .foregroundColor(Color.white)
+                .onTapGesture {
+                    viewModel.isInfoPresented = true
+                }
+        }
+        .padding(.top, 16)
+        .padding(.horizontal, 32)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: .init(dbClient: DBClient.live))
+        MainView(viewModel: MainView.ViewModel(dbClient: DBClient.live))
     }
 }

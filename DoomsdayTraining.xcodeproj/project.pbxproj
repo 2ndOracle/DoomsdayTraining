@@ -21,6 +21,10 @@
 		055B2007290A6EB9007FC8AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B2005290A6EB9007FC8AB /* Colors.swift */; };
 		055B2009290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B2008290A6F7F007FC8AB /* HoneyCombGrid.swift */; };
 		055B200A290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B2008290A6F7F007FC8AB /* HoneyCombGrid.swift */; };
+		0565F33929328BD8007327EC /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F33829328BD8007327EC /* String+Localized.swift */; };
+		0565F33A29328BD8007327EC /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F33829328BD8007327EC /* String+Localized.swift */; };
+		0565F33D29329C7C007327EC /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F33C29329C7C007327EC /* InfoView.swift */; };
+		0565F33E29329C7C007327EC /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F33C29329C7C007327EC /* InfoView.swift */; };
 		057097E3290C17130042EC4C /* HoneyCombTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057097E2290C17130042EC4C /* HoneyCombTile.swift */; };
 		057097E4290C17130042EC4C /* HoneyCombTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057097E2290C17130042EC4C /* HoneyCombTile.swift */; };
 		0578CD9F290D35F400908759 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578CD9E290D35F400908759 /* Weekday.swift */; };
@@ -29,6 +33,8 @@
 		058AEECB2915D555006CDFE2 /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AEEC92915D555006CDFE2 /* DBClient.swift */; };
 		059E8262290F1948007FD642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059E8265290F1948007FD642 /* Localizable.strings */; };
 		059E8263290F1948007FD642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059E8265290F1948007FD642 /* Localizable.strings */; };
+		05BC1C9D293E686500C0549B /* StaisticsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC1C9C293E686500C0549B /* StaisticsVM.swift */; };
+		05BC1C9E293E686500C0549B /* StaisticsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC1C9C293E686500C0549B /* StaisticsVM.swift */; };
 		05C12985293280C000DF09E1 /* EmptyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C12984293280C000DF09E1 /* EmptyBackground.swift */; };
 		05C12986293280C000DF09E1 /* EmptyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C12984293280C000DF09E1 /* EmptyBackground.swift */; };
 		05C5561C2916E839005BB568 /* DBPuttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5561B2916E839005BB568 /* DBPuttable.swift */; };
@@ -78,11 +84,14 @@
 		0553CE1C2915B1AC004E7DD1 /* GuessAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessAttempt.swift; sourceTree = "<group>"; };
 		055B2005290A6EB9007FC8AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		055B2008290A6F7F007FC8AB /* HoneyCombGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneyCombGrid.swift; sourceTree = "<group>"; };
+		0565F33829328BD8007327EC /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		0565F33C29329C7C007327EC /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		057097E2290C17130042EC4C /* HoneyCombTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneyCombTile.swift; sourceTree = "<group>"; };
 		0578CD9E290D35F400908759 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 		058AEEC92915D555006CDFE2 /* DBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBClient.swift; sourceTree = "<group>"; };
 		059E8264290F1948007FD642 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		059E8268290F1C6C007FD642 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05BC1C9C293E686500C0549B /* StaisticsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaisticsVM.swift; sourceTree = "<group>"; };
 		05C12984293280C000DF09E1 /* EmptyBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBackground.swift; sourceTree = "<group>"; };
 		05C5561B2916E839005BB568 /* DBPuttable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPuttable.swift; sourceTree = "<group>"; };
 		05D78C2F29098EAA0050623B /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
@@ -138,6 +147,7 @@
 		05486B10292D6269004AA0FA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0565F33B29329C6C007327EC /* Info */,
 				05486B11292D6317004AA0FA /* Statistics */,
 				05E2C441290890C6004DE440 /* Main */,
 			);
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				05486B12292D632B004AA0FA /* StatisticsView.swift */,
+				05BC1C9C293E686500C0549B /* StaisticsVM.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -168,6 +179,14 @@
 				05E2C40729089096004DE440 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0565F33B29329C6C007327EC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				0565F33C29329C7C007327EC /* InfoView.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		0578CD9D290D35DB00908759 /* Models */ = {
@@ -211,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				05D78C2F29098EAA0050623B /* Date+Formatter.swift */,
+				0565F33829328BD8007327EC /* String+Localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,10 +263,10 @@
 				05E2C40629089095004DE440 /* ContentView.swift */,
 				059E1C2F290D378C007FD642 /* Persistence */,
 				0578CD9D290D35DB00908759 /* Models */,
-				055B2004290A6E9E007FC8AB /* Resources */,
-				05D78C2E29098E920050623B /* Extensions */,
 				05486B10292D6269004AA0FA /* Presentation */,
 				05C129832932803000DF09E1 /* CommonViews */,
+				05D78C2E29098E920050623B /* Extensions */,
+				055B2004290A6E9E007FC8AB /* Resources */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -467,6 +487,7 @@
 				05E2C44629089106004DE440 /* MainView.swift in Sources */,
 				055B2006290A6EB9007FC8AB /* Colors.swift in Sources */,
 				05E2C443290890EB004DE440 /* MainVM.swift in Sources */,
+				0565F33D29329C7C007327EC /* InfoView.swift in Sources */,
 				0578CD9F290D35F400908759 /* Weekday.swift in Sources */,
 				05C12985293280C000DF09E1 /* EmptyBackground.swift in Sources */,
 				055B2009290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */,
@@ -474,7 +495,9 @@
 				05E2C42D29089096004DE440 /* DoomsdayTrainingApp.swift in Sources */,
 				0528D14429168B60000A6403 /* Main.xcdatamodeld in Sources */,
 				05486B13292D632B004AA0FA /* StatisticsView.swift in Sources */,
+				05BC1C9D293E686500C0549B /* StaisticsVM.swift in Sources */,
 				05C5561C2916E839005BB568 /* DBPuttable.swift in Sources */,
+				0565F33929328BD8007327EC /* String+Localized.swift in Sources */,
 				0553CE1D2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */,
 				057097E3290C17130042EC4C /* HoneyCombTile.swift in Sources */,
 			);
@@ -492,6 +515,7 @@
 				05E2C44729089106004DE440 /* MainView.swift in Sources */,
 				055B2007290A6EB9007FC8AB /* Colors.swift in Sources */,
 				05E2C444290890EB004DE440 /* MainVM.swift in Sources */,
+				0565F33E29329C7C007327EC /* InfoView.swift in Sources */,
 				0578CDA0290D35F400908759 /* Weekday.swift in Sources */,
 				05C12986293280C000DF09E1 /* EmptyBackground.swift in Sources */,
 				055B200A290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */,
@@ -499,7 +523,9 @@
 				05E2C42E29089096004DE440 /* DoomsdayTrainingApp.swift in Sources */,
 				0528D14529168B60000A6403 /* Main.xcdatamodeld in Sources */,
 				05486B14292D632B004AA0FA /* StatisticsView.swift in Sources */,
+				05BC1C9E293E686500C0549B /* StaisticsVM.swift in Sources */,
 				05C5561D2916E839005BB568 /* DBPuttable.swift in Sources */,
+				0565F33A29328BD8007327EC /* String+Localized.swift in Sources */,
 				0553CE1E2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */,
 				057097E4290C17130042EC4C /* HoneyCombTile.swift in Sources */,
 			);

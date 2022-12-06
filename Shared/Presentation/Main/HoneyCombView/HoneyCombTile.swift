@@ -40,8 +40,7 @@ extension HoneyCombTile {
 
 struct HoneyCombTile_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Colors.mainBg
+        EmptyBackground {
             HoneyCombTile(
                 input: HoneyCombTile.Input(
                     color: Color.white,

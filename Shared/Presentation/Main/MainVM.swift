@@ -16,61 +16,47 @@ extension MainView {
 
         init(dbClient: DBClient) {
             self.dbClient = dbClient
-            generateRandomDate()
+            refreshDateText()
         }
 
         // MARK: - Properties
-        private var date: Date!
+        private var date: Date = Date.random() {
+            didSet {
+                refreshDateText()
+            }
+        }
         
         // MARK: - View state
         @Published var dateToGuess = ""
         @Published var text = ""
         @Published var weekday = Weekday.monday
         
-        //todo
-        @Published var movies: [DBGuessAttempt] = []
+        @Published var isStatsPresented = false
+        @Published var isInfoPresented = false
     }
 }
 
 // MARK: - Input
 extension MainView.ViewModel {
     func resetDate() {
-        generateRandomDate()
+        date = Date.random()
     }
     
     func weekdayChosen(_ weekday: Weekday) {
         let attempt = GuessAttempt(
-            dateToGuess: Date(),
-            guessedWeekday: Weekday.monday,
+            dateToGuess: date,
+            guessedWeekday: weekday,
             attemptDate: Date()
         )
         
-        
-//        let dbModel = DBGuessAttempt(provider.persistentContainer.viewContext, with: attempt)
-//        
-//        try! provider.persistentContainer.viewContext.save()
-        
-        print(weekday)//todo
+        dbClient.put(attempt)
     }
 }
-import UIKit
+
 // MARK: - Private
-extension MainView.ViewModel {
-    private func generateRandomDate() {
-        date = Date.random()
+private extension MainView.ViewModel {
+    func refreshDateText() {
         dateToGuess = Date.formatter.string(from: date)
         weekday = Weekday(date: date)
-        
-        //todo
-        let fetchRequest: NSFetchRequest<DBGuessAttempt>
-        fetchRequest = DBGuessAttempt.fetchRequest()
-
-//        let context = provider.persistentContainer.viewContext
-
-        // Perform the fetch request to get the objects
-        // matching the predicate
-//        let objects = try! context.fetch(fetchRequest)
-        
-//        movies = objects
     }
 }

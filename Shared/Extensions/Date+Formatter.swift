@@ -11,19 +11,19 @@ extension Date {
     static func random() -> Date {
         Date(
             timeIntervalSinceNow: .random(
-                in: parseFormatter.date(
-                    from: "01-01-1800"
-                )!.timeIntervalSinceNow...parseFormatter.date(
-                    from: "01-01-2300"
+                in: intFormatter.date(
+                    from: "01 01 1800"
+                )!.timeIntervalSinceNow...intFormatter.date(
+                    from: "01 01 2300"
                 )!.timeIntervalSinceNow
             )
         )
     }
     
-    private static let parseFormatter: DateFormatter = {
+    static let intFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = NSTimeZone.default
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "dd MM yyyy"
         return dateFormatter
     }()
 

@@ -146,8 +146,7 @@ struct HoneyCombGrid_Previews: PreviewProvider {
     @State static var weekday = Weekday.sunday
     
     static var previews: some View {
-        ZStack {
-            Colors.mainBg
+        EmptyBackground {
             HoneyCombGrid(
                 input: HoneyCombGrid.Input(
                     hiddenWeekday: $weekday,
