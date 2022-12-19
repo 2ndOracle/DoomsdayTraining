@@ -18,9 +18,13 @@ struct StatisticsView: View {
                 
                 ScrollView(showsIndicators: false) {
                     if !viewModel.attemptRows.isEmpty {
+                        tableHeader
                         table
                     } else {
-                        Spacer()//todo wrong placeholder
+                        Image(systemName: "sun.haze")
+                            .padding(.top, 24)
+                            .font(Font.system(size: 212))
+                            .foregroundColor(Color.white)
                     }
                 }
             }
@@ -29,7 +33,7 @@ struct StatisticsView: View {
     
     private var bar: some View {
         ZStack {
-            Text("Attempts")
+            Text("attempts".localized)
                 .foregroundColor(.white)
                 .font(Font.system(size: 24).bold())
                 .padding(.top, 8)
@@ -37,7 +41,7 @@ struct StatisticsView: View {
             HStack {
                 Spacer()
                 
-                Text("Cancel")
+                Text("cancel".localized)
                     .foregroundColor(.white)
                     .font(Font.system(size: 18).bold())
                     .padding(.trailing, 8)
@@ -55,28 +59,82 @@ struct StatisticsView: View {
                 let rowData = viewModel.attemptRows[index - 1]
                 let isCorrect = rowData.correctWeekday
                     == rowData.guessedWeekday
+                
                 HStack {
                     Text(String(index))
                         .foregroundColor(.white)
-                        .padding(.leading, 8)
+                        .monospacedDigit()
+                        .frame(minWidth: 40)
+                    divider
                     Text(rowData.date)
                         .foregroundColor(.white)
-                    Text(rowData.correctWeekday.shortName)
-                        .foregroundColor(.white)
-                    Spacer()
-                    Text(rowData.guessedWeekday.shortName)
-                        .foregroundColor(.white)
-                    Spacer()
+                        .monospacedDigit()
+                        .frame(minWidth: 100)
+                    
+                    Group {
+                        divider
+                        Text(rowData.correctWeekday.name)
+                            .foregroundColor(.white)
+                            .frame(minWidth: 80)
+                        divider
+                        Text(rowData.guessedWeekday.name)
+                            .foregroundColor(.white)
+                            .frame(minWidth: 80)
+                        Spacer()
+                    }
+                    
+                    divider
                     Rectangle()
-                        .foregroundColor(isCorrect ? .green : .red)
+                        .foregroundColor(isCorrect ? Colors.mint : Colors.red)
                         .aspectRatio(1.0, contentMode: .fit)
                         .frame(maxHeight: 24)
+                        .cornerRadius(12)
                         .padding(.trailing, 8)
                 }
                 .padding(.vertical, 8)
                 .border(.white)
             }
         }
+    }
+    
+    private var tableHeader: some View {
+        HStack {
+            Text("№")
+                .foregroundColor(.white)
+                .monospacedDigit()
+                .frame(minWidth: 40)
+            divider
+            Text("guess_date".localized)
+                .foregroundColor(.white)
+                .monospacedDigit()
+                .frame(minWidth: 100)
+            
+            Group {
+                divider
+                Text("correct".localized)
+                    .foregroundColor(.white)
+                    .frame(minWidth: 80)
+                divider
+                Text("your".localized)
+                    .foregroundColor(.white)
+                    .frame(minWidth: 80)
+                Spacer()
+            }
+            
+            divider
+            Text("😏")
+                .foregroundColor(.white)
+                .padding(.trailing, 8)
+        }
+        .padding(.vertical, 8)
+        .border(.white)
+    }
+    
+    private var divider: some View {
+        Divider()
+            .frame(width: 2)
+            .background(Color.white)
+            .padding(.vertical, -8)
     }
 }
 

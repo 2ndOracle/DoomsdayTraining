@@ -21,3 +21,15 @@
 "friday_short" = "FR";
 "saturday_short" = "SA";
 "sunday_short" = "SU";
+
+"cancel" = "Cancel";
+"attempts" = "Attempts";
+"guess_date" = "Guess Date";
+"correct" = "Correct";
+"your" = "Your";
+
+"link_text" = "Just watch this";
+"link_video" = "video";
+"info" = "Info";
+
+"try_guess" = "Guess which day is";

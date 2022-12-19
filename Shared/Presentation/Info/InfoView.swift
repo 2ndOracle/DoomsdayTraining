@@ -32,16 +32,16 @@ struct InfoView: View {
     }
     
     private var linkText: some View {
-        Text("Just watch this [video](https://youtu.be/z2x3SSBVGJU)")
+        let linkText = "link_text".localized
+        let linkVideo = "link_video".localized
+        return Text("\(linkText) [\(linkVideo)](https://youtu.be/z2x3SSBVGJU)")
             .font(Font.system(size: 86).bold())
             .padding()
     }
-    
-    //https://youtu.be/z2x3SSBVGJU
-    
+        
     private var bar: some View {
         ZStack {
-            Text("Info")
+            Text("info".localized)
                 .foregroundColor(.white)
                 .font(Font.system(size: 24).bold())
                 .padding(.top, 8)
@@ -49,7 +49,7 @@ struct InfoView: View {
             HStack {
                 Spacer()
                 
-                Text("Cancel")
+                Text("cancel".localized)
                     .foregroundColor(.white)
                     .font(Font.system(size: 18).bold())
                     .padding(.trailing, 8)

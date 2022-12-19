@@ -19,7 +19,11 @@ extension DBClient {
     static let live = Self(
         put: { object in
             object.put(in: Self.livePersistentContainer.viewContext)
-            try! Self.livePersistentContainer.viewContext.save()//todo remove try
+            do {
+                try Self.livePersistentContainer.viewContext.save()
+            } catch {
+                fatalError("Container saving \(error)")
+            }
         },
         saveChanges: {
             do {

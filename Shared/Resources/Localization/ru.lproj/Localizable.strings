@@ -21,3 +21,15 @@
 "friday_short" = "ПТ";
 "saturday_short" = "СБ";
 "sunday_short" = "ВС";
+
+"cancel" = "Отмена";
+"attempts" = "Попытки";
+"guess_date" = "Дата попытки";
+"correct" = "Правильно";
+"your" = "Твоё";
+
+"link_text" = "Просто посмотри это";
+"link_video" = "видео";
+"info" = "Инфо";
+
+"try_guess" = "Угадай какой день";

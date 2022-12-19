@@ -5,10 +5,10 @@
 //  Created by Александр Шакмаков on 27.10.2022.
 //
 
+import AVFoundation
 import SwiftUI
 
 struct HoneyCombGrid: View {
-    
     let input: Input
     
     private let columnsCount: Int = 3
@@ -50,6 +50,7 @@ struct HoneyCombGrid: View {
                     .onTapGesture {
                         guard index != emptyTileIndex else { return }
                         if isInitialState {
+                            AudioServicesPlaySystemSound(SystemSoundID(1104))
                             onTap(index: index)
                         } else {
                             isInitialState = true

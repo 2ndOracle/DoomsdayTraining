@@ -13,10 +13,9 @@ struct MainView: View {
     var body: some View {
         EmptyBackground {
             VStack {
-                bar
                 Spacer()
                 
-                Text("Guess which day is")
+                Text("try_guess".localized)
                     .foregroundColor(Color.white)
                     .font(Font.system(size: 32))
                 Text(viewModel.dateToGuess)
@@ -32,8 +31,9 @@ struct MainView: View {
                     )
                 )
                 .aspectRatio(contentMode: .fit)
-                
                 Spacer()
+                
+                bar
             }
         }
         .sheet(isPresented: $viewModel.isStatsPresented) {
@@ -65,7 +65,7 @@ struct MainView: View {
                     viewModel.isInfoPresented = true
                 }
         }
-        .padding(.top, 16)
+        .padding(.bottom, 16)
         .padding(.horizontal, 32)
     }
 }

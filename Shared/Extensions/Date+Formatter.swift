@@ -23,7 +23,7 @@ extension Date {
     static let intFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = NSTimeZone.default
-        dateFormatter.dateFormat = "dd MM yyyy"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         return dateFormatter
     }()
 

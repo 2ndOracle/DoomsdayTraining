@@ -25,8 +25,7 @@ protocol DBFetchableModel: NSManagedObject {}
 
 extension DBFetchableModel {
     static func fetch(from context: NSManagedObjectContext) -> [Self] {
-        let fetchRequest: NSFetchRequest<Self>
-        fetchRequest = Self.fetchRequest() as! NSFetchRequest<Self>//todo check
+        let fetchRequest = Self.fetchRequest() as! NSFetchRequest<Self>
         
         let objects = try! context.fetch(fetchRequest)
         
