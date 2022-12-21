@@ -17,7 +17,7 @@ struct EmptyBackground<Content: View>: View {
     
     var body: some View {
         ZStack {
-            Colors.mainBg
+            Colors.gray
                 .ignoresSafeArea()
             content()
         }

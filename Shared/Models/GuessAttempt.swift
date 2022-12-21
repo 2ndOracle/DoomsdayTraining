@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: компарабле по дате попытки
 struct GuessAttempt {
     let dateToGuess: Date
     let guessedWeekday: Weekday

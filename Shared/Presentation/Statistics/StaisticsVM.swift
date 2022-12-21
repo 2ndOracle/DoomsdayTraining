@@ -25,6 +25,15 @@ extension StatisticsView {
     }
 }
 
+// MARK: - Input
+extension StatisticsView.ViewModel {
+    
+    func clearDB() {
+        dbClient.clearAll(String(describing: DBGuessAttempt.self))
+        readFromDB()
+    }
+}
+
 // MARK: - Private
 private extension StatisticsView.ViewModel {
     

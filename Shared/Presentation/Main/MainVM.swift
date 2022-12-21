@@ -56,7 +56,7 @@ extension MainView.ViewModel {
 // MARK: - Private
 private extension MainView.ViewModel {
     func refreshDateText() {
-        dateToGuess = Date.formatter.string(from: date)
+        dateToGuess = Date.mainFormatter.string(from: date)
         weekday = Weekday(date: date)
     }
 }

@@ -10,35 +10,57 @@ import SwiftUI
 struct StatisticsView: View {
     @Binding var isPresented: Bool
     @StateObject var viewModel: ViewModel
-  
+    
     var body: some View {
         EmptyBackground {
             VStack {
                 bar
                 
-                ScrollView(showsIndicators: false) {
-                    if !viewModel.attemptRows.isEmpty {
+                if !viewModel.attemptRows.isEmpty {
+                    ScrollView(showsIndicators: false) {
                         tableHeader
                         table
-                    } else {
-                        Image(systemName: "sun.haze")
-                            .padding(.top, 24)
-                            .font(Font.system(size: 212))
-                            .foregroundColor(Color.white)
+                    }
+                } else {
+                    ZStack {
+                        BubblyBackground()
+                        
+                        hintText
+                            .foregroundColor(.white)
+                            .blendMode(.difference)
+                            .overlay(hintText.blendMode(.hue))
+                            .overlay(hintText.foregroundColor(.white).blendMode(.overlay))
+                            .overlay(hintText.foregroundColor(.black).blendMode(.overlay))
                     }
                 }
             }
         }
     }
     
+    private var hintText: some View {
+        return Text("no_attempts".localized)
+            .font(Font.system(size: 42).bold())
+            .padding()
+    }
+    
     private var bar: some View {
         ZStack {
+            
             Text("attempts".localized)
                 .foregroundColor(.white)
                 .font(Font.system(size: 24).bold())
                 .padding(.top, 8)
             
             HStack {
+                Text("clear".localized)
+                    .foregroundColor(.white)
+                    .font(Font.system(size: 18).bold())
+                    .padding(.leading, 8)
+                    .padding(.top, 8)
+                    .onTapGesture {
+                        viewModel.clearDB()
+                    }
+                
                 Spacer()
                 
                 Text("cancel".localized)
@@ -69,17 +91,17 @@ struct StatisticsView: View {
                     Text(rowData.date)
                         .foregroundColor(.white)
                         .monospacedDigit()
-                        .frame(minWidth: 100)
+                        .frame(minWidth: 120)
                     
                     Group {
                         divider
-                        Text(rowData.correctWeekday.name)
+                        Text(rowData.correctWeekday.shortName)
                             .foregroundColor(.white)
-                            .frame(minWidth: 80)
+                            .frame(minWidth: 60)
                         divider
-                        Text(rowData.guessedWeekday.name)
+                        Text(rowData.guessedWeekday.shortName)
                             .foregroundColor(.white)
-                            .frame(minWidth: 80)
+                            .frame(minWidth: 60)
                         Spacer()
                     }
                     
@@ -107,17 +129,18 @@ struct StatisticsView: View {
             Text("guess_date".localized)
                 .foregroundColor(.white)
                 .monospacedDigit()
-                .frame(minWidth: 100)
+                .frame(minWidth: 120)
             
             Group {
                 divider
                 Text("correct".localized)
                     .foregroundColor(.white)
-                    .frame(minWidth: 80)
+                    .frame(minWidth: 60)
+                Spacer()
                 divider
                 Text("your".localized)
                     .foregroundColor(.white)
-                    .frame(minWidth: 80)
+                    .frame(minWidth: 60)
                 Spacer()
             }
             

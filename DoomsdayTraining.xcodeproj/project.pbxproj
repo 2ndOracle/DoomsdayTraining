@@ -27,6 +27,8 @@
 		0565F33E29329C7C007327EC /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565F33C29329C7C007327EC /* InfoView.swift */; };
 		057097E3290C17130042EC4C /* HoneyCombTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057097E2290C17130042EC4C /* HoneyCombTile.swift */; };
 		057097E4290C17130042EC4C /* HoneyCombTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057097E2290C17130042EC4C /* HoneyCombTile.swift */; };
+		0574B2E72950E8A1004546DA /* BubblyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0574B2E62950E8A1004546DA /* BubblyBackground.swift */; };
+		0574B2E82950E8A1004546DA /* BubblyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0574B2E62950E8A1004546DA /* BubblyBackground.swift */; };
 		0578CD9F290D35F400908759 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578CD9E290D35F400908759 /* Weekday.swift */; };
 		0578CDA0290D35F400908759 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0578CD9E290D35F400908759 /* Weekday.swift */; };
 		058AEECA2915D555006CDFE2 /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AEEC92915D555006CDFE2 /* DBClient.swift */; };
@@ -87,6 +89,7 @@
 		0565F33829328BD8007327EC /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		0565F33C29329C7C007327EC /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		057097E2290C17130042EC4C /* HoneyCombTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneyCombTile.swift; sourceTree = "<group>"; };
+		0574B2E62950E8A1004546DA /* BubblyBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyBackground.swift; sourceTree = "<group>"; };
 		0578CD9E290D35F400908759 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 		058AEEC92915D555006CDFE2 /* DBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBClient.swift; sourceTree = "<group>"; };
 		059E8264290F1948007FD642 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -99,7 +102,7 @@
 		05E2C40529089095004DE440 /* DoomsdayTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayTrainingApp.swift; sourceTree = "<group>"; };
 		05E2C40629089095004DE440 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05E2C40729089096004DE440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05E2C40C29089096004DE440 /* DoomsdayTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoomsdayTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E2C40C29089096004DE440 /* Doomsday Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doomsday Training.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E2C41229089096004DE440 /* DoomsdayTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoomsdayTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E2C41429089096004DE440 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		05E2C41929089096004DE440 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				05C12984293280C000DF09E1 /* EmptyBackground.swift */,
+				0574B2E62950E8A1004546DA /* BubblyBackground.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -274,7 +278,7 @@
 		05E2C40D29089096004DE440 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05E2C40C29089096004DE440 /* DoomsdayTraining.app */,
+				05E2C40C29089096004DE440 /* Doomsday Training.app */,
 				05E2C41229089096004DE440 /* DoomsdayTraining.app */,
 				05E2C41929089096004DE440 /* Tests iOS.xctest */,
 				05E2C42529089096004DE440 /* Tests macOS.xctest */,
@@ -335,7 +339,7 @@
 			);
 			name = "DoomsdayTraining (iOS)";
 			productName = "Doomsday Training (iOS)";
-			productReference = 05E2C40C29089096004DE440 /* DoomsdayTraining.app */;
+			productReference = 05E2C40C29089096004DE440 /* Doomsday Training.app */;
 			productType = "com.apple.product-type.application";
 		};
 		05E2C41129089096004DE440 /* DoomsdayTraining (macOS) */ = {
@@ -486,6 +490,7 @@
 				058AEECA2915D555006CDFE2 /* DBClient.swift in Sources */,
 				05E2C44629089106004DE440 /* MainView.swift in Sources */,
 				055B2006290A6EB9007FC8AB /* Colors.swift in Sources */,
+				0574B2E72950E8A1004546DA /* BubblyBackground.swift in Sources */,
 				05E2C443290890EB004DE440 /* MainVM.swift in Sources */,
 				0565F33D29329C7C007327EC /* InfoView.swift in Sources */,
 				0578CD9F290D35F400908759 /* Weekday.swift in Sources */,
@@ -514,6 +519,7 @@
 				058AEECB2915D555006CDFE2 /* DBClient.swift in Sources */,
 				05E2C44729089106004DE440 /* MainView.swift in Sources */,
 				055B2007290A6EB9007FC8AB /* Colors.swift in Sources */,
+				0574B2E82950E8A1004546DA /* BubblyBackground.swift in Sources */,
 				05E2C444290890EB004DE440 /* MainVM.swift in Sources */,
 				0565F33E29329C7C007327EC /* InfoView.swift in Sources */,
 				0578CDA0290D35F400908759 /* Weekday.swift in Sources */,
@@ -708,7 +714,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sample.doomsday.training;
-				PRODUCT_NAME = DoomsdayTraining;
+				PRODUCT_NAME = "Doomsday Training";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -738,7 +744,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sample.doomsday.training;
-				PRODUCT_NAME = DoomsdayTraining;
+				PRODUCT_NAME = "Doomsday Training";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

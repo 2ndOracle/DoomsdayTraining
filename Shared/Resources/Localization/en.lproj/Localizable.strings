@@ -31,5 +31,7 @@
 "link_text" = "Just watch this";
 "link_video" = "video";
 "info" = "Info";
+"clear" = "Clear";
+"no_attempts" = "No attempts";
 
 "try_guess" = "Guess which day is";

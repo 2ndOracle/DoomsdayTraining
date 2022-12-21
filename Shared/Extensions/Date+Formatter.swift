@@ -26,8 +26,15 @@ extension Date {
         dateFormatter.dateFormat = "dd-MM-yyyy"
         return dateFormatter
     }()
+    
+    static let mainFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = NSTimeZone.default
+        dateFormatter.dateFormat = "d MMMM yyyy"
+        return dateFormatter
+    }()
 
-    static let formatter: DateFormatter = {
+    static private let formatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = NSTimeZone.default
         dateFormatter.dateFormat = "d MMM yyyy"

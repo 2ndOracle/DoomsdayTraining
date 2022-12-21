@@ -15,7 +15,7 @@ struct HoneyCombTile: View {
             ZStack {
                 input.color
                 Text(input.text)
-                    .foregroundColor(Colors.mainBg)
+                    .foregroundColor(Colors.gray)
                     .font(Font.system(size: 48).bold())
             }
             .frame(width: input.tileSize.width, height: input.tileSize.height)

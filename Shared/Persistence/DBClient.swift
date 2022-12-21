@@ -8,11 +8,13 @@
 import CoreData
 
 // TODO: Remove all fatalError
+// TODO: Rewrite clear all
 
 struct DBClient {
     let put: (_ object: DBPuttable) -> ()
     let saveChanges: () -> ()
     let fetch: AnyDBFetcher
+    let clearAll: (String) -> ()
 }
 
 extension DBClient {
@@ -32,7 +34,16 @@ extension DBClient {
                 fatalError("Container saving \(error)")
             }
         },
-        fetch: DBFetcher()
+        fetch: DBFetcher(),
+        clearAll: { name in
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: name)
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            do {
+                try livePersistentContainer.viewContext.execute(deleteRequest)
+            } catch {
+                fatalError("Container deleting \(error)")
+            }
+        }
      )
 }
 
