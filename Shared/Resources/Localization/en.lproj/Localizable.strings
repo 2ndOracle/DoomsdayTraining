@@ -28,10 +28,17 @@
 "correct" = "Correct";
 "your" = "Your";
 
-"link_text" = "Just watch this";
 "link_video" = "video";
 "info" = "Info";
 "clear" = "Clear";
 "no_attempts" = "No attempts";
+"explanation" = "Explanation";
+"settings" = "Settings";
+"hints" = "Hints";
+"sound_enabled" = "Sound Enabled";
+
+"year" = "Year";
+"century" = "Century";
+"a_lot" = "A lot";
 
 "try_guess" = "Guess which day is";

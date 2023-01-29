@@ -7,9 +7,6 @@
 
 import CoreData
 
-// TODO: Remove all fatalError
-// TODO: Rewrite clear all
-
 struct DBClient {
     let put: (_ object: DBPuttable) -> ()
     let saveChanges: () -> ()
@@ -24,14 +21,14 @@ extension DBClient {
             do {
                 try Self.livePersistentContainer.viewContext.save()
             } catch {
-                fatalError("Container saving \(error)")
+                assertionFailure("Container saving \(error)")
             }
         },
         saveChanges: {
             do {
                 try livePersistentContainer.viewContext.save()
             } catch {
-                fatalError("Container saving \(error)")
+                assertionFailure("Container saving \(error)")
             }
         },
         fetch: DBFetcher(),
@@ -41,7 +38,7 @@ extension DBClient {
             do {
                 try livePersistentContainer.viewContext.execute(deleteRequest)
             } catch {
-                fatalError("Container deleting \(error)")
+                assertionFailure("Container deleting \(error)")
             }
         }
      )
@@ -53,7 +50,7 @@ extension DBClient {
         let container = NSPersistentContainer(name: "Main")
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
-                fatalError("Loading persistent store \(error)")
+                assertionFailure("Loading persistent store \(error)")
             }
         }
         return container

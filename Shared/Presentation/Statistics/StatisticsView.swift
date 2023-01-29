@@ -25,22 +25,14 @@ struct StatisticsView: View {
                     ZStack {
                         BubblyBackground()
                         
-                        hintText
-                            .foregroundColor(.white)
-                            .blendMode(.difference)
-                            .overlay(hintText.blendMode(.hue))
-                            .overlay(hintText.foregroundColor(.white).blendMode(.overlay))
-                            .overlay(hintText.foregroundColor(.black).blendMode(.overlay))
+                        BlendingText(
+                            text: "no_attempts",
+                            font: Font.system(size: 42).bold()
+                        )
                     }
                 }
             }
         }
-    }
-    
-    private var hintText: some View {
-        return Text("no_attempts".localized)
-            .font(Font.system(size: 42).bold())
-            .padding()
     }
     
     private var bar: some View {

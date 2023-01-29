@@ -43,7 +43,10 @@ struct MainView: View {
             )
         }
         .sheet(isPresented: $viewModel.isInfoPresented) {
-            InfoView(isPresented: $viewModel.isInfoPresented)
+            InfoView(
+                isPresented: $viewModel.isInfoPresented,
+                viewModel: InfoView.ViewModel()
+            )
         }
     }
     

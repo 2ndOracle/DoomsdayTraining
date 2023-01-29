@@ -11,6 +11,10 @@
 		0528D14529168B60000A6403 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14229168B60000A6403 /* Main.xcdatamodeld */; };
 		0528D14729168BD6000A6403 /* DBGuessAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14629168BD6000A6403 /* DBGuessAttempt.swift */; };
 		0528D14829168BD6000A6403 /* DBGuessAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0528D14629168BD6000A6403 /* DBGuessAttempt.swift */; };
+		053C2253297C3782001F814E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C2252297C3782001F814E /* Storage.swift */; };
+		053C2254297C3782001F814E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C2252297C3782001F814E /* Storage.swift */; };
+		053C2256297C4507001F814E /* Date+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C2255297C4507001F814E /* Date+Random.swift */; };
+		053C2257297C4507001F814E /* Date+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053C2255297C4507001F814E /* Date+Random.swift */; };
 		05486B13292D632B004AA0FA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05486B12292D632B004AA0FA /* StatisticsView.swift */; };
 		05486B14292D632B004AA0FA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05486B12292D632B004AA0FA /* StatisticsView.swift */; };
 		0551BA5829182C3C00258424 /* DBFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551BA5729182C3C00258424 /* DBFetchable.swift */; };
@@ -35,12 +39,18 @@
 		058AEECB2915D555006CDFE2 /* DBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AEEC92915D555006CDFE2 /* DBClient.swift */; };
 		059E8262290F1948007FD642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059E8265290F1948007FD642 /* Localizable.strings */; };
 		059E8263290F1948007FD642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059E8265290F1948007FD642 /* Localizable.strings */; };
+		05A383982953A4E80056E6F5 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A383972953A4E80056E6F5 /* SegmentedControl.swift */; };
+		05A383992953A4E80056E6F5 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A383972953A4E80056E6F5 /* SegmentedControl.swift */; };
+		05A3839E2953A9860056E6F5 /* BlendingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3839D2953A9860056E6F5 /* BlendingText.swift */; };
+		05A3839F2953A9860056E6F5 /* BlendingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3839D2953A9860056E6F5 /* BlendingText.swift */; };
 		05BC1C9D293E686500C0549B /* StaisticsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC1C9C293E686500C0549B /* StaisticsVM.swift */; };
 		05BC1C9E293E686500C0549B /* StaisticsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC1C9C293E686500C0549B /* StaisticsVM.swift */; };
 		05C12985293280C000DF09E1 /* EmptyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C12984293280C000DF09E1 /* EmptyBackground.swift */; };
 		05C12986293280C000DF09E1 /* EmptyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C12984293280C000DF09E1 /* EmptyBackground.swift */; };
 		05C5561C2916E839005BB568 /* DBPuttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5561B2916E839005BB568 /* DBPuttable.swift */; };
 		05C5561D2916E839005BB568 /* DBPuttable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5561B2916E839005BB568 /* DBPuttable.swift */; };
+		05C92D6A295CF34700730720 /* InfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C92D69295CF34700730720 /* InfoVM.swift */; };
+		05C92D6B295CF34700730720 /* InfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C92D69295CF34700730720 /* InfoVM.swift */; };
 		05D78C3029098EAA0050623B /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D78C2F29098EAA0050623B /* Date+Formatter.swift */; };
 		05D78C3129098EAA0050623B /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D78C2F29098EAA0050623B /* Date+Formatter.swift */; };
 		05D78C3429099EF60050623B /* PolygonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D78C3329099EF60050623B /* PolygonShape.swift */; };
@@ -81,6 +91,8 @@
 /* Begin PBXFileReference section */
 		0528D14329168B60000A6403 /* DBGuessAttempt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBGuessAttempt.xcdatamodel; sourceTree = "<group>"; };
 		0528D14629168BD6000A6403 /* DBGuessAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBGuessAttempt.swift; sourceTree = "<group>"; };
+		053C2252297C3782001F814E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		053C2255297C4507001F814E /* Date+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Random.swift"; sourceTree = "<group>"; };
 		05486B12292D632B004AA0FA /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		0551BA5729182C3C00258424 /* DBFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFetchable.swift; sourceTree = "<group>"; };
 		0553CE1C2915B1AC004E7DD1 /* GuessAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessAttempt.swift; sourceTree = "<group>"; };
@@ -94,9 +106,12 @@
 		058AEEC92915D555006CDFE2 /* DBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBClient.swift; sourceTree = "<group>"; };
 		059E8264290F1948007FD642 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		059E8268290F1C6C007FD642 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05A383972953A4E80056E6F5 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		05A3839D2953A9860056E6F5 /* BlendingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendingText.swift; sourceTree = "<group>"; };
 		05BC1C9C293E686500C0549B /* StaisticsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaisticsVM.swift; sourceTree = "<group>"; };
 		05C12984293280C000DF09E1 /* EmptyBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBackground.swift; sourceTree = "<group>"; };
 		05C5561B2916E839005BB568 /* DBPuttable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPuttable.swift; sourceTree = "<group>"; };
+		05C92D69295CF34700730720 /* InfoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVM.swift; sourceTree = "<group>"; };
 		05D78C2F29098EAA0050623B /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		05D78C3329099EF60050623B /* PolygonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonShape.swift; sourceTree = "<group>"; };
 		05E2C40529089095004DE440 /* DoomsdayTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomsdayTrainingApp.swift; sourceTree = "<group>"; };
@@ -188,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				0565F33C29329C7C007327EC /* InfoView.swift */,
+				05C92D69295CF34700730720 /* InfoVM.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -221,11 +237,21 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		05A383A02953AD1B0056E6F5 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				053C2252297C3782001F814E /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		05C129832932803000DF09E1 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
 				05C12984293280C000DF09E1 /* EmptyBackground.swift */,
 				0574B2E62950E8A1004546DA /* BubblyBackground.swift */,
+				05A383972953A4E80056E6F5 /* SegmentedControl.swift */,
+				05A3839D2953A9860056E6F5 /* BlendingText.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -233,6 +259,7 @@
 		05D78C2E29098E920050623B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				053C2255297C4507001F814E /* Date+Random.swift */,
 				05D78C2F29098EAA0050623B /* Date+Formatter.swift */,
 				0565F33829328BD8007327EC /* String+Localized.swift */,
 			);
@@ -265,6 +292,7 @@
 			children = (
 				05E2C40529089095004DE440 /* DoomsdayTrainingApp.swift */,
 				05E2C40629089095004DE440 /* ContentView.swift */,
+				05A383A02953AD1B0056E6F5 /* Storage */,
 				059E1C2F290D378C007FD642 /* Persistence */,
 				0578CD9D290D35DB00908759 /* Models */,
 				05486B10292D6269004AA0FA /* Presentation */,
@@ -492,19 +520,24 @@
 				055B2006290A6EB9007FC8AB /* Colors.swift in Sources */,
 				0574B2E72950E8A1004546DA /* BubblyBackground.swift in Sources */,
 				05E2C443290890EB004DE440 /* MainVM.swift in Sources */,
+				05C92D6A295CF34700730720 /* InfoVM.swift in Sources */,
 				0565F33D29329C7C007327EC /* InfoView.swift in Sources */,
 				0578CD9F290D35F400908759 /* Weekday.swift in Sources */,
 				05C12985293280C000DF09E1 /* EmptyBackground.swift in Sources */,
 				055B2009290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */,
+				05A3839E2953A9860056E6F5 /* BlendingText.swift in Sources */,
 				0528D14729168BD6000A6403 /* DBGuessAttempt.swift in Sources */,
 				05E2C42D29089096004DE440 /* DoomsdayTrainingApp.swift in Sources */,
 				0528D14429168B60000A6403 /* Main.xcdatamodeld in Sources */,
+				053C2256297C4507001F814E /* Date+Random.swift in Sources */,
 				05486B13292D632B004AA0FA /* StatisticsView.swift in Sources */,
 				05BC1C9D293E686500C0549B /* StaisticsVM.swift in Sources */,
 				05C5561C2916E839005BB568 /* DBPuttable.swift in Sources */,
 				0565F33929328BD8007327EC /* String+Localized.swift in Sources */,
+				05A383982953A4E80056E6F5 /* SegmentedControl.swift in Sources */,
 				0553CE1D2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */,
 				057097E3290C17130042EC4C /* HoneyCombTile.swift in Sources */,
+				053C2253297C3782001F814E /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,19 +554,24 @@
 				055B2007290A6EB9007FC8AB /* Colors.swift in Sources */,
 				0574B2E82950E8A1004546DA /* BubblyBackground.swift in Sources */,
 				05E2C444290890EB004DE440 /* MainVM.swift in Sources */,
+				05C92D6B295CF34700730720 /* InfoVM.swift in Sources */,
 				0565F33E29329C7C007327EC /* InfoView.swift in Sources */,
 				0578CDA0290D35F400908759 /* Weekday.swift in Sources */,
 				05C12986293280C000DF09E1 /* EmptyBackground.swift in Sources */,
 				055B200A290A6F7F007FC8AB /* HoneyCombGrid.swift in Sources */,
+				05A3839F2953A9860056E6F5 /* BlendingText.swift in Sources */,
 				0528D14829168BD6000A6403 /* DBGuessAttempt.swift in Sources */,
 				05E2C42E29089096004DE440 /* DoomsdayTrainingApp.swift in Sources */,
 				0528D14529168B60000A6403 /* Main.xcdatamodeld in Sources */,
+				053C2257297C4507001F814E /* Date+Random.swift in Sources */,
 				05486B14292D632B004AA0FA /* StatisticsView.swift in Sources */,
 				05BC1C9E293E686500C0549B /* StaisticsVM.swift in Sources */,
 				05C5561D2916E839005BB568 /* DBPuttable.swift in Sources */,
 				0565F33A29328BD8007327EC /* String+Localized.swift in Sources */,
+				05A383992953A4E80056E6F5 /* SegmentedControl.swift in Sources */,
 				0553CE1E2915B1AC004E7DD1 /* GuessAttempt.swift in Sources */,
 				057097E4290C17130042EC4C /* HoneyCombTile.swift in Sources */,
+				053C2254297C3782001F814E /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

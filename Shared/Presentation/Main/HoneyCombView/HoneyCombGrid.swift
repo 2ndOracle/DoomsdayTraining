@@ -50,8 +50,9 @@ struct HoneyCombGrid: View {
                     .onTapGesture {
                         guard index != emptyTileIndex else { return }
                         if isInitialState {
-                            // TODO: - сделать настройку
-                            AudioServicesPlaySystemSound(SystemSoundID(1104))
+                            if Storage.Settings.soundEnabled {
+                                AudioServicesPlaySystemSound(SystemSoundID(1104))
+                            }
                             onTap(index: index)
                         } else {
                             isInitialState = true

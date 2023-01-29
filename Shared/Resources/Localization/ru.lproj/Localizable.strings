@@ -28,10 +28,17 @@
 "correct" = "Правильно";
 "your" = "Твоё";
 
-"link_text" = "Просто посмотри это";
 "link_video" = "видео";
 "info" = "Инфо";
 "clear" = "Очистить";
 "no_attempts" = "Нет попыток";
+"explanation" = "Объяснение";
+"settings" = "Настройки";
+"hints" = "Подсказки";
+"sound_enabled" = "Звук включён";
+
+"year" = "Год";
+"century" = "Век";
+"a_lot" = "Много";
 
 "try_guess" = "Угадай какой день";

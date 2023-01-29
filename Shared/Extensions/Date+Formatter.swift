@@ -7,19 +7,8 @@
 
 import Foundation
 
+// MARK: - Formatters
 extension Date {
-    static func random() -> Date {
-        Date(
-            timeIntervalSinceNow: .random(
-                in: intFormatter.date(
-                    from: "01 01 1800"
-                )!.timeIntervalSinceNow...intFormatter.date(
-                    from: "01 01 2300"
-                )!.timeIntervalSinceNow
-            )
-        )
-    }
-    
     static let intFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = NSTimeZone.default
