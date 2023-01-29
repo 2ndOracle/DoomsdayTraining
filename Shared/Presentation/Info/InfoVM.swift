@@ -31,12 +31,14 @@ extension InfoView {
 extension InfoView.ViewModel {
     func setupBindings() {
         $selectedIndex
+            .dropFirst()
             .sink {
                 Storage.Settings.difficulty = $0
             }
             .store(in: &subscriptions)
         
         $soundEnabled
+            .dropFirst()
             .sink {
                 Storage.Settings.soundEnabled = $0
             }

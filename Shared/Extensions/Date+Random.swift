@@ -15,43 +15,41 @@ extension Date {
     
     private static func userSelectedDateRange() -> ClosedRange<TimeInterval> {
         switch Storage.Settings.difficulty {
-        case 1: return yearDate
-        case 2: return centuryDate
-        case 3: return bigDate
+        case 0: return yearDate
+        case 1: return centuryDate
+        case 2: return bigDate
         default: return bigDate
         }
     }
 }
 
-// MARK: - Ranges
+// MARK: - Date ranges
 private extension Date {
-    static var bigDate: ClosedRange<TimeInterval> {
+    static let bigDate: ClosedRange<TimeInterval> = {
         intFormatter.date(
             from: "01 01 1800"
         )!.timeIntervalSinceNow...intFormatter.date(
             from: "01 01 2300"
         )!.timeIntervalSinceNow
-    }
+    }()
     
-    static var centuryDate: ClosedRange<TimeInterval> {
+    static let centuryDate: ClosedRange<TimeInterval> = {
         intFormatter.date(
             from: "01 01 2000"
         )!.timeIntervalSinceNow...intFormatter.date(
             from: "01 01 2100"
         )!.timeIntervalSinceNow
-    }
+    }()
     
     static var yearDate: ClosedRange<TimeInterval> {
-        let currentYear = currentYear()
-        
         return intFormatter.date(
-            from: "01 01 \(currentYear)"
+            from: "01 01 \(currentYearString)"
         )!.timeIntervalSinceNow...intFormatter.date(
-            from: "31 12 \(currentYear)"
+            from: "31 12 \(currentYearString)"
         )!.timeIntervalSinceNow
     }
-
-    private static func currentYear() -> String {
+    
+    static let currentYearString: String = {
         return String(Calendar.current.component(.year, from: Date()))
-    }
+    }()
 }
